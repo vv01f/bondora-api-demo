@@ -12,7 +12,7 @@ import re
 bearer = ''
 with open('bearer.conf', 'r') as f:
     bearer = f.read()
-    f.close()
+    # f.close() # obsolete, content manager (with) does that
 
 bearer = re.sub('[^a-zA-Z0-9]' , '', bearer)
 
